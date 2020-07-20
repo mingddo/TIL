@@ -92,7 +92,15 @@ $ git remote add origin {github repo url}
   ```
 
 * ```sh
-  $ git push origin master > 업로드
+  $ git push origin master > 업로드 
+  ```
+
+* 등록된 원격 저장소를 삭제하려면 아래의 명령어를 참고하세요
+
+* ```sh
+  $ git remote rm origin 
+  후 확인
+  $ git remote -v
   ```
 
 * 
