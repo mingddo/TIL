@@ -100,7 +100,16 @@ $ git remote add origin {github repo url}
 * ```sh
   $ git remote rm origin 
   후 확인
-  $ git remote -v
-  ```
+  $ git remote 
+  -v
+```
+  
 
-* 
+
+
+### 4. 원격 저장소에서 로컬로 가져오기
+
+```sh
+$ git clone {가져오고자 하는 repo url}
+```
+
