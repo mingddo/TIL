@@ -1,6 +1,6 @@
 #### 1. 답 : ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
-```py
+```python
 import keyword
 print(keyword.kwlist)
 ```
@@ -25,7 +25,7 @@ math.isclose(num1,num2)
 
 #### 4.  코드
 
-```py
+```python
 name = '철수'
 print(f'안녕 {name}야')
 ```
@@ -40,13 +40,20 @@ str형은 바로 int 형으로 변환 안됨. float형으로 변환 후 int형�
 
 #### 6.  답:
 
+```python
+n=5
+m=9
+result = ('*' * n +'\n') * m 
+print(result)
+```
+
 
 
 
 
 #### 7. 코드
 
-```py
+```python
 print('"파일은 C:\\windows\\Users\\내문서\\Python에 저장되었습니다."\n나는 생각했다. \'cd를 써서 git bash로 들어가 봐야지.\'')
 ```
 
@@ -54,7 +61,11 @@ print('"파일은 C:\\windows\\Users\\내문서\\Python에 저장되었습니다
 
 
 
-#### 8.
+#### 8.a=2
+b=3
+c=5
+
+(-b + (b*b - 4*a*c)**(1/2))/(2*a)
 
 
 
