@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8. Vue v-text & v-html</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-text='myMessage'></li>
+      <li v-html='myMessage'></li>
+      <li>{{ myMessage }}</li>
+    </ul>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        myMessage: '<li>Hello Vue.js</li>',
+      }
+    })
+  </script>
+</body>
+</html>

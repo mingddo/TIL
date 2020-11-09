@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoCRUD</title>
+  <style>
+    .done{
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <input type="text">
+  <button>Todo!</button>
+  <ul></ul>
+
+  <script>
+    const button = document.querySelector('button')
+    const input = document.querySelector('input')
+
+    function addTodoUpadateDelete(){
+    const content = input.value
+
+    if (content !== '') {
+      const li = document.createElement('li')
+      li.innerText = content
+
+      const ul = document.querySelector('ul')
+      ul.appendChild(li)
+      //값을 비우는 로직
+      input.value = ''
+      // li.style.textDecoration = 'line-through'
+      li.addEventListener('click', function(event){
+        // if (event.target.classList.length === 0) {
+        //   event.target.classList.add('done')
+        // }else{
+        //   event.target.classList.remove('done')
+        // }
+        event.target.classList.toggle('done')
+      })
+
+      // li.remove()
+      const deletebutton = document.createElement('button')
+      deletebutton. innerText = 'X'
+      deletebutton.style.marginLeft = '10px'
+      li.appendChild(deletebutton)
+
+      deletebutton.addEventListener('click', function(){
+        li.remove()
+      })
+
+      }else{
+        alert('빈값 안됨!!')
+      }
+
+    }
+
+    button.addEventListener('click', addTodoUpadateDelete)
+    input.addEventListener('keydown', function (event){
+      if (event.code === 'Enter') {
+        addTodoUpadateDelete()
+      }
+    })
+
+  </script>
+</body>
+</html>

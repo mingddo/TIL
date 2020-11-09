@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>preventDefault</title>
+	<style>
+    body {
+      height: 10000px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. checkbox -->
+  <input type="checkbox" id="myCheckBox">
+  <hr>
+
+  <!-- 2. submit -->
+  <form action="/articles/" id="myForm">
+    <input type="text">
+    <input type="submit">
+  </form>
+  <hr>
+
+  <!-- 3. link -->
+  <a href="https://google.com" target="_blank" id="myLink">GoToGoogle</a>
+  <hr>
+
+  <!-- 4. input -->
+  <input type="text" id="myInput">
+  
+  <script>
+    const form = document.querySelector('#myForm')
+    form.addEventListener('submit', function (event){
+      console.log(event)
+      event.preventDefault()
+
+    })
+  </script>
+</body>
+</html>

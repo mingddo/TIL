@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6. Vue v-on Methods</title>
+</head>
+<body>
+  <div id="app">
+    <!-- shortcut v-on > @ -->
+    <button @click="alertMessage">Click</button>
+    <hr>
+    <h2>{{ counter }}</h2>
+    <button v-on:click='addOne'>Click</button>
+    <hr>
+    <input type="text" @keyup.enter='onInputChange'>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message : 'Hello Vue.js',
+      counter: 0,
+    },
+    methods: {
+      alertMessage: function (){
+        alert('Hello Vue.js')
+      },
+      addOne: function() {
+        this.counter += 1
+      },
+      onInputChange: function() {
+        console.log('enter!')
+      }
+    }
+   })
+  </script>
+</body>
+</html>

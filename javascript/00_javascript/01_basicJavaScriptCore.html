@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic JavaScript Core Things</title>
+</head>
+<body>
+  <script>
+    // Conditional Expression
+    const myName = 'ssafy 4th'
+
+    if (myName === 'ssafy 4th') {
+      console.log('ssafy 4th님 환영합니다.')
+    } else if (myName === 'ssafy 3th') {
+      console.log('ssafy 3th님 환영합니다.')
+    } else {
+      console.log('환영합니다.')
+    }
+
+    // Iteration 
+    // + for ... in / for ... of
+    for (let i = 0; i < 6; i++) {
+      console.log(i)
+    }
+
+    // Function Declaration & Call
+    //1. 함수 선언
+    // 함수 선언식
+    function add (num1, num2) {
+      // console.log(num1 + num2)
+      return num1 + num2
+    }
+
+    // 함수 표현식
+    const sub = function (num1, num2) {
+      // console.log(num1 - num2)
+      return num1 - num2
+    }
+
+    // arrow function
+    const multi = (num1, num2) => {
+      return num1 * num2
+    }
+
+    //2. 함수 호출
+    const result1 = add(2, 7)
+    const result2 = sub(7, 2)
+    const result3 = multi(7, 2)
+
+    console.log(result1, result2, result3)
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axios</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    /*
+    //1. XHR
+    //1-1.
+    const xhr = new XMLHttpRequest()
+
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1')
+    xhr.send()
+
+    const res = xhr.response
+    console.log(res)
+
+    
+    //1-2.
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const res = xhr.response
+        console.log(res) // 결과
+      }
+    }
+
+    //2. Axios
+    //2-1. Axios의 return 값은 Promise
+    const promise = axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    console.log(promise)
+
+    // 꺼내오자!
+    promise
+      .then(function (res) {
+        // console.log(res)
+        // console.log(res.data)
+        console.log(res.data.title)
+      })
+
+
+
+    // 결국 위와 같은 행위를 한번에 할 수 있다.
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      .then(function (res) {
+        console.log(res.data.title)
+      })
+
+    //2-2. chaining
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      .then(function (res) {
+        console.log(res)
+        return res.data
+      })
+      .then(function (res) {
+        console.log(res)
+        return res.title
+      })
+      .then(function (res) {
+        console.log(res)
+      })
+      .catch(function (err){
+        console.log(err)
+      })
+*/
+
+    //3. async & await
+    //3-1. 기본 axios 요청
+    function getTodo () {
+      console.log('1')
+      axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      .then(function (res) {
+        console.log(res.data.title)
+      })
+      console.log('2')
+    }
+    getTodo()
+
+    //3-2. async & await
+    async function getTodo2 () {
+      console.log('1')
+      await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+        .then(function (res) {
+          console.log(res)
+        })
+      // const response =  await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      // console.log(response)
+      console.log('2')
+    }
+    getTodo2()
+  </script>
+</body>
+</html>
